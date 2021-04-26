@@ -22,3 +22,66 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+# テーブル設計
+
+## usersテーブル
+
+|colum               | Type    | Options                   |
+| -------------------|-------- |-------------------------- |
+| nickname           | string  | nul: false                |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
+| first_name         | string  | null: false               |
+| last_name          | string  | null: false               |
+| first_name_kana    | string  | null: false               |
+| last_name_kana     | string  | null: false               |
+| birthday           | date    | null: false               |
+
+### Association
+has_many :trainings
+has_many :comments
+has_one :target
+
+## trainingsテーブル
+
+|colum                 | Type       | Options           |
+| ---------------------|----------- |------------------ |
+| category_id          | integer    | null: false       |
+| training_menu        | text       | null: false       |
+| point                | text       | null: false       |
+| evaluation           | text       | null: false       |
+| user                 | references | foreign_key: true |
+| comment              | references | foreign_key: true |
+ 
+### Association
+belongs_to :user
+belongs_to :comment
+
+ ## commentsテーブル
+|colum    | Type       | Options           |
+| --------|----------- |------------------ |
+| comment | text       |                   |
+| user    | references | foreign_key: true |
+
+### Association
+belongs_to :user
+has_many :trainings
+
+## targetsテーブル
+|colum                   | Type       | Options           |
+| -----------------------| -----------|-------------------|
+| long_term_goal         | text       | null: false       |
+| intermediate_term_goal | text       | null: false       |
+| short_term_goal        | text       | null: false       |
+| cause                  | text       | null: false       |
+| timing                 | text       | null: false       |
+| rule                   | text       | null: false       |
+| reward_long            | text       | null: false       |
+| reward_intermediate    | text       | null: false       |
+| reward_short           | text       | null: false       |
+| user                   | references | foreign_key: true |
+
+### Association
+belongs_to :user
