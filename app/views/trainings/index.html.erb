@@ -1,10 +1,40 @@
 <main class="main">
   <div class="inner">
+  
     <%# ログインしているときは以下を表示する %>
-      <%# <div class="greeting"> %>
-        <%# こんにちは、 %>
-        <%# <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
-      <%# </div> %>
+     <% if user_signed_in? %>
+      <div class="greeting">
+        <h2>
+        こんにちは、
+        <%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %>
+        </h2>
+        <h2>トレーニングを始めよう！！</h2>
+     </div> 
+    <%# カレンダー形式でトレーニングメニューを表示 %>
+    <div class='calendar'>
+    <% @week_days.each do |day| %>
+      <div class='item'>
+        <div class='date'>
+          <%=day[:month] %>/<%=day[:date] %>/<%=day[:wday]%>
+        </div>
+        <ul class='content'>
+        <% if day[:plans].length != 0 %>
+          <% day[:plans].each do |plan| %>
+            <li class='plan-list'>・<%= plan %></li>
+          <% end %>
+            <%= link_to "詳細", "#"%>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+    
+    <%# カレンダー形式でトレーニングメニューを表示 %>
+
+
+
+
+     <% end %>
     <%# // ログインしているときは上記を表示する %>
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>

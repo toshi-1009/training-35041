@@ -21,7 +21,7 @@
             <% if user_signed_in? %> 
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path,  method: :delete, class: :nav__logout, method: :delete %>
-              <%= link_to "new training", "#", class: :nav__btn %>
+              <%= link_to "new training", new_training_path, class: :nav__btn %>
              </div> 
             <% else %> 
             <div class="nav__right">
@@ -35,7 +35,7 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+      <p class="copyright">Copyright © TRAINING All rights reserved.</p>
     </footer>
   </body>
 </html>

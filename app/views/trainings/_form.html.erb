@@ -1,25 +1,31 @@
-<%= form_with model: モデル名, local: true do |f|%>
+<%= form_with model: @training, url: trainings_path, local: true do |f|%>
+  
+
   <div class="field">
-    <%= f.label :hoge, "プロトタイプの名称" %><br />
-    <%= f.text_field :hoge, id:"prototype_title" %>
+    <%= f.label :date, "日付" %><br />
+    <%= f.date_field :date, id:"prototype_title" %>
+  </div>
+ 
+  <div class="field">
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"genre-select"}) %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "キャッチコピー" %><br />
-    <%= f.text_area :hoge, class: :form__text, id:"prototype_catch_copy" %>
+    <%= f.label :training_menu, "トレーニングメニュー" %><br />
+    <%= f.text_area :training_menu, class: :form__text, id:"prototype_catch_copy" %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "コンセプト" %><br />
-    <%= f.text_area :hoge, class: :form__text, id:"prototype_concept" %>
+    <%= f.label :point, "トレーニングのポイント" %><br />
+    <%= f.text_area :point, class: :form__text, id:"prototype_catch_copy" %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "プロトタイプの画像" %><br />
-    <%= f.file_field :hoge, id:"prototype_image" %>
+    <%= f.label :evaluation, "トレーニング評価" %><br />
+    <%= f.text_area :evaluation, class: :form__text, id:"prototype_concept" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
+    <%= f.submit "設定", class: :form__btn  %>
   </div>
 <% end %>

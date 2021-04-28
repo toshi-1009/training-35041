@@ -47,23 +47,23 @@ has_one :target
 | category_id          | integer    | null: false       |
 | training_menu        | text       | null: false       |
 | point                | text       | null: false       |
-| evaluation           | text       | null: false       |
+| evaluation           | text       |                   |
 | user                 | references | foreign_key: true |
-| comment              | references | foreign_key: true |
  
 ### Association
 belongs_to :user
-belongs_to :comment
+has_many :comments
 
  ## commentsテーブル
-|colum    | Type       | Options           |
-| --------|----------- |------------------ |
-| comment | text       |                   |
-| user    | references | foreign_key: true |
+|colum      | Type       | Options           |
+| ----------|----------- |------------------ |
+| comment   | text       |                   |
+| user      | references | foreign_key: true |
+| training  | references | foreign_key: true |
 
 ### Association
 belongs_to :user
-has_many :trainings
+belongs_to :training
 
 ## targetsテーブル
 |colum                   | Type       | Options           |
