@@ -1,15 +1,23 @@
-<main class="main">
+<div class="top__image">
+<%# <%= link_to image_tag("top-image2.png") %> 
+<%= image_tag 'top-image2.png' %>
+</div>
+
+    <main class="main">
   <div class="inner">
-  
     <%# ログインしているときは以下を表示する %>
+
      <% if user_signed_in? %>
       <div class="greeting">
-        <h2>
+        <h1>
         こんにちは、
         <%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %>
-        </h2>
-        <h2>トレーニングを始めよう！！</h2>
+        </h1>
+        <h1>トレーニングを始めよう！！</h1>
      </div> 
+     <div class="title">
+     <h2>トレーニングスケジュール一覧</h2>
+     </div>
     <%# カレンダー形式でトレーニングメニューを表示 %>
     <div class='calendar'>
     <% @week_days.each do |day| %>
@@ -21,8 +29,9 @@
         <% if day[:plans].length != 0 %>
           <% day[:plans].each do |plan| %>
             <li class='plan-list'>・<%= plan %></li>
+          
           <% end %>
-            <%= link_to "詳細", "#"%>
+            <%= link_to "詳細", training_path(:id), method: :get, class: :show_button %>
         <% end %>
         </ul>
       </div>
@@ -39,5 +48,5 @@
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
     </div>
-  </div>
+ </div>
 </main>

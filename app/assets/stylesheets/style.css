@@ -38,12 +38,14 @@ a {
 
 .header {
   background-color: #c9e265;
-  margin-bottom: 48px;
-  /* padding: 20px 0; */
+  margin-bottom: 10px;
+  padding: 0 30;
+  
 
 }
+
 .inner {
-  width: 1024px;
+  width: 100vw;
   margin: 0 auto;
 }
 .nav {
@@ -52,23 +54,24 @@ a {
   justify-content: space-between;
 }
 .logo {
-  width: 200px;
+  width: 300px;
 }
 
 .nav__right{
 padding: 20px,0px;
 }
 
+
 .nav__btn{
   display: inline-block;
-  padding: 0.4em 1.6em;
-  margin-right: 30px;
-  margin-top: 30px;
-  font-size: 0.8em;
-  color: white;
+  padding: 1.3em 4.0em;
+  margin-right: 50px;
+  margin-top: 50px;
+  font-size: 1.0em;
+  color: black;
   text-decoration: none;
   user-select: none;
-  border: 1px white solid;
+  border: 2px black solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
@@ -128,6 +131,7 @@ padding: 20px,0px;
 /* メイン */
 
 .greeting{
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .greeting__link{
@@ -168,83 +172,12 @@ padding: 20px,0px;
   text-decoration: underline;
 }
 
-/* 詳細ページ */
-.prototype__wrapper{
-  min-height: calc(100vh - 161px);
-}
-.prototype__hedding{
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
-.prototype__user{
-  display: block;
-  font-size: 16px;
-  color: #999;
-  text-align: center;
-  text-decoration: underline;
-}
-.prototype__image{
-  width: 40%;
-  margin: 0 auto;
-  padding: 16px 0;
-}
-.prototype__detail{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
-.detail__title{
-  font-size: 20px;
-  font-weight: bold;
-}
-.prototype__manage{
-  display: flex;
-  justify-content: center;
-  padding-top: 16px;
-}
-.prototype__btn{
-  display: block;
-  padding: 0.4em 1.6em;
-  font-size: 0.4em;
-  color: #999;
-  text-decoration: none;
-  user-select: none;
-  border: 1px #999 solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-  margin: 0 4px;
-}
-.prototype__btn:hover{
-  color: #fff;
-  background: #999;
-}
 
-.prototype__comments{
-  background-color: #f6f6f6;
-  padding: 20px;
-  margin: 28px 0 40px 0;
-}
-
-.comments_lists{
-  padding-left: 20px;
-}
-
-.comments_list{
-  list-style-type: square;
-  padding-bottom: 5px;
-}
-
-.comment_user{
-  font-size: 16px;
-  color: #999;
-  text-decoration: underline;
-}
 
 /* ユーザーページ */
 .user__wrapper{
   min-height: calc(100vh - 161px);
+
 }
 .table{
   border-collapse: collapse;
@@ -276,7 +209,7 @@ padding: 20px,0px;
 /* フッター */
 
 .footer {
-  background-color: #999;
+  background-color: #c9e265;
   padding: 10px 0;
 }
 .copyright {
@@ -285,54 +218,13 @@ padding: 20px,0px;
   font-size: 10px;
 }
 
-/* タブレット対応 */
-@media (max-width: 1024px) {
-  .inner {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .page-heading {
-    font-size: 24px;
-  }
-  .card {
-    width: 48%;
-    margin-bottom: 40px;
-  }
-  .prototype_image{
-    width: 60%;
-  }
-}
 
- /* スマホ表示 */
-@media (max-width: 599px) {
-  .logo {
-    width: 120px;
-  }
-  .page-heading {
-    font-size: 20px;
-  }
-  .card {
-    width: 100%;
-    margin-bottom: 60px;
-  }
-  .card__title {
-    font-size: 18px;
-  }
-  .card__summary {
-    font-size: 14px;
-  }
-  .prototype_image{
-    width: 100%;
-  }
-  .table{
-    width: 100%;
-  }
-}
+/* トレーニングカレンダー */
 
 .calendar {
   width: 100vw;
-  margin-top: 15vh;
-  display: flex;
+  margin: 30px,50px;
+
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -341,27 +233,29 @@ padding: 20px,0px;
 .item {
   margin: 0.5vw;
   border: medium solid rgb(0, 0, 0);
-  width: 12vw;
+  width: 80vw;
   height: auto;
-  background-color: rgb(246, 253, 255);
+  background-color: white;
 }
 
 .date {
   height: 5vh;
+  padding-left: 15px;
   display: flex;
   font-size: 3vh;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   border-bottom: medium solid rgb(0, 0, 0);
 }
 
 .content {
   min-height: 25vh;
-  padding: 5px;
+  /* padding: 5px; */
   white-space: nowrap;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .plan-list {
   margin: 1vh 0;
 }
+

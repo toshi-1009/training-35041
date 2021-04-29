@@ -16,7 +16,7 @@ def create
 end
 
 def show
-  
+  @training = Training.find
 end
 
 def edit

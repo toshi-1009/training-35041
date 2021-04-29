@@ -1,28 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション名
+training管理アプリケーション
 
-Things you may want to cover:
+# アプリケーションの概要
 
-* Ruby version
+# URL
 
-* System dependencies
+# 利用方法
 
-* Configuration
+# 目指した課題解決
 
-* Database creation
+# 洗い出した要件
 
-* Database initialization
+# 実装した機能について
 
-* How to run the test suite
+# 実装予定の機能について
 
-* Services (job queues, cache servers, search engines, etc.)
+# データベース設計
 
-* Deployment instructions
-
-* ...
-
+# ローカルでの動作方法
 
 # テーブル設計
 
@@ -47,12 +44,11 @@ has_one :target
 | category_id          | integer    | null: false       |
 | training_menu        | text       | null: false       |
 | point                | text       | null: false       |
-| evaluation           | text       |                   |
 | user                 | references | foreign_key: true |
  
 ### Association
 belongs_to :user
-has_many :comments
+has_one :comment
 
  ## commentsテーブル
 |colum      | Type       | Options           |
