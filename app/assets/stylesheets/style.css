@@ -218,44 +218,31 @@ padding: 20px,0px;
   font-size: 10px;
 }
 
-
-/* トレーニングカレンダー */
-
-.calendar {
-  width: 100vw;
-  margin: 30px,50px;
-
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+/* トレーニング一覧表示 */
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
 }
 
-.item {
-  margin: 0.5vw;
-  border: medium solid rgb(0, 0, 0);
-  width: 80vw;
-  height: auto;
-  background-color: white;
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
 }
 
-.date {
-  height: 5vh;
-  padding-left: 15px;
-  display: flex;
-  font-size: 3vh;
-  align-items: center;
-  justify-content: left;
-  border-bottom: medium solid rgb(0, 0, 0);
+table tr:hover{
+  background-color: #d4f0fd;
 }
 
-.content {
-  min-height: 25vh;
-  /* padding: 5px; */
-  white-space: nowrap;
-  overflow: auto;
+table th,table td{
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
 }
 
-.plan-list {
-  margin: 1vh 0;
+table td.icon{
+  background-size: 35px;
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
 }
-
