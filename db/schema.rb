@@ -16,8 +16,7 @@ ActiveRecord::Schema.define(version: 2021_04_27_085758) do
     t.date "date", null: false
     t.integer "category_id", null: false
     t.text "training_menu", null: false
-    t.text "point", null: false
-    t.text "evaluation"
+    t.text "comment"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

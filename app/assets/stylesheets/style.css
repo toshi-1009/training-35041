@@ -246,3 +246,14 @@ table td.icon{
   background-repeat: no-repeat;
   padding-left: 30px;
 }
+
+/* 詳細ページ ボタン */
+.button-whole {
+  text-align:center
+}
+
+.button {
+  margin: 30px 10px;
+  font-size: 20px;
+} 
+/* 詳細ページ ボタン */

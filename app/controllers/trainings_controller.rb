@@ -1,7 +1,7 @@
 class TrainingsController < ApplicationController
 
 def index
-  @trainings = Training.all
+  @trainings = Training.all.page(params[:page]).per(5)
 end
 
 def new
@@ -18,7 +18,7 @@ def create
 end
 
 def show
-  @training = Training.find
+  @training = Training.find(params[:id])
 end
 
 def edit
@@ -34,6 +34,6 @@ end
 
 private
 def training_params
-  params.require(:training).permit(:date, :training_menu, :category_id, :point,:evaluation).merge(user_id: current_user.id)
+  params.require(:training).permit(:date, :training_menu, :category_id,:comment).merge(user_id: current_user.id)
 end
 end

@@ -8,8 +8,7 @@ class Training < ApplicationRecord
     validates :date
     validates :category_id, numericality: { other_than: 1 }
     validates :training_menu, length:{ maximum: 1000}
-    validates :point, length:{ maximum: 1000}
   end
-  validates :evaluation, length:{ maximum: 1000}
+  validates :comment, length:{ maximum: 1000}
 
 end

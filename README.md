@@ -1,10 +1,10 @@
 # README
 
 # アプリケーション名
-training管理アプリケーション
+トレーニング習慣化アプリケーション
 
 # アプリケーションの概要
-目標の設定、その目標達成のために行うトレーニングメニューの設定を行い、それらを管理することにより、トレーニングを習慣化させ、目標達成をサポートしてくれるアプリケーションです。
+目標の設定、実施記録を付けることを行うことで実施してきたトレーニング内容を可視化することにより、トレーニングを習慣化させ、目標達成をサポートしてくれるアプリケーションです。
 
 # URL
 https://training-35041.herokuapp.com/
@@ -12,8 +12,8 @@ https://training-35041.herokuapp.com/
 # 利用方法
 1.ログイン、または新規登録をします。
 2.目標設定をします。
-3.目標達成に向けてトレーニングメニューを設定します。
-4.実施したトレーニングについては、評価コメントをいれ、振り返りをする。
+3.実施したトレーニング内容、それに関するコメントを入力します。
+4.トップページで一覧を確認することができます。
 
 # 目指した課題解決
 1.一日の中で、トレーニングに当てる時間の確保ができていないという課題。
@@ -30,7 +30,6 @@ https://training-35041.herokuapp.com/
 5.編集機能
 6.削除機能
 7.目標設定機能
-8.評価コメント機能
 # 実装した機能について
 ・ユーザー管理機能
 ログイン/ログアウト、新規登録をすることができます。
@@ -80,7 +79,6 @@ ER図参照
 
 ### Association
 has_many :trainings
-has_many :comments
 has_one :target
 
 ## trainingsテーブル
@@ -89,37 +87,19 @@ has_one :target
 | ---------------------|----------- |------------------ |
 | category_id          | integer    | null: false       |
 | training_menu        | text       | null: false       |
-| point                | text       | null: false       |
+| comment              | text       | null: false       |
 | user                 | references | foreign_key: true |
  
 ### Association
 belongs_to :user
-has_one :comment
-
- ## commentsテーブル
-|colum      | Type       | Options           |
-| ----------|----------- |------------------ |
-| comment   | text       |                   |
-| user      | references | foreign_key: true |
-| training  | references | foreign_key: true |
-
-### Association
-belongs_to :user
-belongs_to :training
 
 ## targetsテーブル
-|colum                   | Type       | Options           |
-| -----------------------| -----------|-------------------|
-| long_term_goal         | text       | null: false       |
-| intermediate_term_goal | text       | null: false       |
-| short_term_goal        | text       | null: false       |
-| cause                  | text       | null: false       |
-| timing                 | text       | null: false       |
-| rule                   | text       | null: false       |
-| reward_long            | text       | null: false       |
-| reward_intermediate    | text       | null: false       |
-| reward_short           | text       | null: false       |
-| user                   | references | foreign_key: true |
+|colum      | Type       | Options           |
+| ----------| -----------|-------------------|
+| target    | text       | null: false       |
+| timing    | text       | null: false       |
+| activity  | text       | null: false       |
+| user      | references | foreign_key: true |
 
 ### Association
 belongs_to :user
