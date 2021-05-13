@@ -31,8 +31,15 @@ def update
     redirect_to training_path 
   else
     render :edit
-  end 
+  end
 end
+
+def destroy
+  training = Training.find(params[:id])
+  training.destroy
+  redirect_to root_path
+end
+
 
 
 
