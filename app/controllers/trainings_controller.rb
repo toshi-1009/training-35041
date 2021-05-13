@@ -1,4 +1,5 @@
 class TrainingsController < ApplicationController
+  before_action :set_training, only: [:show, :edit, :update, :destroy]
 
 def index
   @trainings = Training.all.page(params[:page]).per(5)
@@ -18,22 +19,30 @@ def create
 end
 
 def show
-  @training = Training.find(params[:id])
+ 
 end
 
 def edit
-  
+
 end
 
 def update
-  
+  if @training.update(training_params)
+    redirect_to training_path 
+  else
+    render :edit
+  end 
 end
-
 
 
 
 private
 def training_params
-  params.require(:training).permit(:date, :training_menu, :category_id,:comment).merge(user_id: current_user.id)
+  params.require(:training).permit(:date, :training_menu, :category_id, :comment).merge(user_id: current_user.id)
 end
+
+def set_training
+  @training = Training.find(params[:id])
+end
+
 end

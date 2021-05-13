@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   root to: "trainings#index"
 
-  resources :trainings,  only: [:new, :create, :show]
+  resources :trainings,  only: [:new, :create, :show, :edit, :update]
 end
