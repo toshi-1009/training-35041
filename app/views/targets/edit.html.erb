@@ -1,0 +1,28 @@
+<h2 class="page-heading">目標設定</h2>
+
+<%= form_with model: @target, local: true do |f|%>
+  
+
+  <div class="field">
+    <%= f.label :target, "目標" %><br />
+    <%= f.text_area :target, class: :form__text, id:"prototype_concept" %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :timing, "実施のタイミング" %><br />
+    <%= f.text_area :timing, class: :form__text, id:"prototype_concept" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :activity, "実施内容" %><br />
+    <%= f.text_area :activity, class: :form__text, id:"prototype_concept" %>
+  </div>
+  <div class="field">
+    <%= f.label :reward, "目標達成時の報酬" %><br />
+    <%= f.text_area :reward, class: :form__text, id:"prototype_concept" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "設定", class: :form__btn  %>
+  </div>
+<% end %>

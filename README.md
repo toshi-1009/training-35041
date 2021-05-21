@@ -56,7 +56,7 @@ https://training-35041.herokuapp.com/
 
 # データベース設計
 ER図参照  
-[![Image from Gyazo](https://i.gyazo.com/79a9cf6440bc9ed90286d9dc3c809382.png)](https://gyazo.com/79a9cf6440bc9ed90286d9dc3c809382)
+[![Image from Gyazo](https://i.gyazo.com/6b36e47c50198d27ab594148242370a4.png)](https://gyazo.com/6b36e47c50198d27ab594148242370a4)
 
 # テーブル設計
 

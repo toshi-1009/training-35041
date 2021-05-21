@@ -258,3 +258,83 @@ table td.icon{
   font-size: 20px;
 } 
 /* 詳細ページ ボタン */
+
+/* 目標設定編集ボタン */
+.button-area {
+  text-align: right;
+  margin-right: 50px;
+}
+
+
+.target-button {
+  margin: 30px 10px;
+  font-size: 20px;
+}
+/* 目標設定編集ボタン */
+
+/* 目標設定一覧表示 */
+table.target {
+  width: 700px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0px 15px;
+  font-size: 12px;
+  }
+  
+  table.target th,
+  table.target td {
+  padding: 10px;
+  }
+  
+  table.target th {
+  background: #295890;
+  vertical-align: middle;
+  text-align: center;
+  width: 150px;
+  overflow: visible;
+  position: relative;
+  color: #fff;
+  font-weight: normal;
+  font-size: 20px;
+  }
+  
+  table.target th:after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #295890;
+  border-width: 10px;
+  margin-top: -10px;
+  }
+  /* firefox */
+  @-moz-document url-prefix() {
+  table.target th::after {
+  float: right;
+  padding: 0;
+  left: 30px;
+  top: 10px;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: relative;
+  pointer-events: none;
+  border: 10px solid transparent;
+  border-left: #295890 10px solid;
+  margin-top: -10px;
+  }
+  }
+  
+  table.target td {
+  background: #f8f8f8;
+  width: 360px;
+  padding-left: 20px;
+  font-weight: normal;
+  font-size: 20px;
+  }
+/* 目標設定一覧表示 */

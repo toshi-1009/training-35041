@@ -1,0 +1,36 @@
+<div class="item-explain-box">
+      <h2>目標の編集</h2>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">目標</th>
+          <td class="detail-value"><%= @target.target %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">実施するタイミング</th>
+          <td class="detail-value"><%=@target.timing %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">行動内容</th>
+          <td class="detail-value"><%= @target.activity %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">報酬</th>
+          <td class="detail-value"><%= @target.reward %></td> 
+        </tr>
+      </tbody>
+    </table>
+    <div class="button-whole">
+      <button class="button">
+        <%= link_to "編集", edit_target_path, method: :get %>
+      </button>
+      <button class="button">
+        <%= link_to "削除", target_path, method: :delete %>
+      </button>
+      <button class="button">
+        <%= link_to "戻る", root_path %>
+      </button>
+    </div>
+  
+ 

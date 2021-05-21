@@ -2,7 +2,8 @@ class TrainingsController < ApplicationController
   before_action :set_training, only: [:show, :edit, :update, :destroy]
 
 def index
-  @trainings = Training.all.page(params[:page]).per(5)
+  @trainings = Training.all.page(params[:page]).per(5).order("created_at DESC")
+  @targets = Target.all.order(updated_at: :desc).limit(1)
 end
 
 def new
@@ -10,8 +11,9 @@ def new
 end
 
 def create
-  @trainings = Training.new(training_params)
-  if @trainings.save
+  # binding.pry
+  @training = Training.new(training_params)
+  if @training.save
     redirect_to root_path 
   else
     render :new

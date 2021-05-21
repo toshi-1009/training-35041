@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2021_05_14_003407) do
   create_table "targets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "target", null: false
     t.text "timing", null: false
-    t.text "actibity", null: false
+    t.text "activity", null: false
     t.text "reward", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false

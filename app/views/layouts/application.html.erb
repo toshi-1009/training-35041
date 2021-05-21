@@ -24,6 +24,7 @@
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path,  method: :delete, class: :nav__btn, method: :delete %>
               <%= link_to "実施記録", new_training_path, class: :nav__btn %>
+              <%= link_to "目標設定", new_target_path, class: :nav__btn %>
              </div> 
             <% else %> 
             <div class="nav__right">

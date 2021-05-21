@@ -1,0 +1,30 @@
+<div>
+
+  <% @targets.each do |target|  %>
+<table class="target">
+      <tbody>
+        <tr>
+          <th class="arrow_box">目標</th>
+          <td ><%= target.target %></td>
+        </tr>
+        <tr>
+          <th class="arrow_box">実施するタイミング</th>
+          <td ><%= target.timing %></td>
+        </tr>
+        <tr>
+          <th class="arrow_box">行動内容</th>
+          <td ><%= target.activity %></td>
+        </tr>
+        <tr>
+          <th class="arrow_box">報酬</th>
+          <td ><%= target.reward %></td> 
+        </tr>
+      </tbody>
+</table>
+     <div class=button-area>
+        <button class="target-button">
+        <%= link_to "目標設定の編集", target_path(target.id), method: :get  %>
+      </button>
+     </div>
+      <% end %>
+</div>
