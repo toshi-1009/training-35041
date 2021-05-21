@@ -7,8 +7,8 @@
     <% if user_signed_in? %>
       <div class="greeting">
         <h1>
-        こんにちは、
-        <%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %>
+        こんにちは！
+        <%= current_user.nickname %>さん
         </h1>
         <h1>トレーニングを始めよう！！</h1>
       </div> 

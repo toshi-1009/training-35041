@@ -134,6 +134,7 @@ padding: 20px,0px;
 .greeting{
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 40px;
 }
 .greeting__link{
   text-decoration: underline;
@@ -220,6 +221,11 @@ padding: 20px,0px;
 }
 
 /* トレーニング一覧表示 */
+.title {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 table{
   border-collapse: collapse;
   border-spacing: 0;
