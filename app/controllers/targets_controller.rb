@@ -2,7 +2,7 @@ class TargetsController < ApplicationController
   before_action :set_target, only: [:show, :edit, :update, :destroy]
 
   def index
-    @targets = Target.all
+    @targets = Target.includes(:user)
   end
 
   def new
@@ -45,7 +45,7 @@ class TargetsController < ApplicationController
 
 
    def set_target
-    # binding.pry
+
     @target = Target.find(params[:id])
    end
 end

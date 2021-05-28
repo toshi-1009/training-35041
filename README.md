@@ -1,7 +1,7 @@
 # README
 
 # 🏃‍♂️アプリケーション名
-トレーニング管理アプリケーション
+トレーニング習慣化アプリケーション
 
 # 🏃‍♂️アプリケーションの概要
 目標の設定、実施記録を付けることができます。実施してきたトレーニング内容を可視化することにより、トレーニングを習慣化させ、目標達成をサポートしてくれるアプリケーションです。
@@ -38,16 +38,19 @@ https://training-35041.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/173fba7a44588153a497d3955c3beb0b.png)](https://gyazo.com/173fba7a44588153a497d3955c3beb0b)
 [![Image from Gyazo](https://i.gyazo.com/46ad98cf9366ae95b9cee0f26e4238fa.png)](https://gyazo.com/46ad98cf9366ae95b9cee0f26e4238fa)  
   
-・実施記録保存機能
+・🏃‍♂️実施記録保存機能
 入力フォームに実施したトレーニング内容を入力し、保存することができます。  
 項目として、トレーニングの種類（カテゴリー）、具体的なトレーニング内容、評価コメントを保存することができます。
-[![Image from Gyazo](https://i.gyazo.com/0b4e652a21bad51152f5ab2105f8b4fa.gif)](https://gyazo.com/0b4e652a21bad51152f5ab2105f8b4fa)
+
+[![Image from Gyazo](https://i.gyazo.com/c624eb62a3abf7492d9e7b654ea319b8.png)](https://gyazo.com/c624eb62a3abf7492d9e7b654ea319b8)
   
-・目標設定機能  
+・🏃‍♂️目標設定機能  
 目標を設定して、それに向けてトレーニングを継続することができるようにします。 目標設定では、目標だけでなく、それを達成するために決めた行動を「いつやるか」,また目標を達成した時の「報酬」を設定することで、行動意欲の向上、習慣化につながりやすくすることを狙いとしています。  
-[![Image from Gyazo](https://i.gyazo.com/0b4e652a21bad51152f5ab2105f8b4fa.gif)](https://gyazo.com/0b4e652a21bad51152f5ab2105f8b4fa)
+
+[![Image from Gyazo](https://i.gyazo.com/4f3595cc1cc3b526604910f6dd74824b.png)](https://gyazo.com/4f3595cc1cc3b526604910f6dd74824b)
   
-・編集、削除機能  
+  
+・🏃‍♂️編集、削除機能  
 「実施記録保存機能」、「目標設定機能」においてそれぞれ、編集、削除をする機能を設けました。  
   
 # 🏃‍♂️データベース設計
